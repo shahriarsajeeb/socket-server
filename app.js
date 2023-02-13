@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-const PORT = 4500;
+const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
