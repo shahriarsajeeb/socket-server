@@ -6,8 +6,6 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-const PORT = 5000;
-
 app.use(cors());
 app.use(express.json());
 
@@ -68,6 +66,6 @@ io.on("connection", (socket) => {
 
 });
 
-server.listen(PORT, () => {
-  console.log(`server is working on port ${PORT}`);
+server.listen(process.env.PORT, () => {
+  console.log(`server is working on port ${process.env.PORT}`);
 });
